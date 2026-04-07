@@ -1,7 +1,9 @@
 🗄️ SQL Server Relational Modeling & Implementation
 
 Este repositório documenta o processo de modelagem, implementação e consulta de um banco de dados relacional robusto, utilizando SQL Server em um ambiente containerizado com Docker. O foco principal e aplicar padrões de Engenharia de Software para garantir a integridade dos dados e a escalabilidade das consultas.
+
 🛠️ Stack Técnica
+
 Engine: Microsoft SQL Server
 
 Ambiente: Docker (Infraestrutura como código para persistência de dados)
@@ -11,6 +13,7 @@ Client: DBeaver 26.0.2 (Interface de gerenciamento e visualização de ER)
 Linguagem: T-SQL (Transact-SQL)
 
 🏗️ Arquitetura do Repositório
+
 /src: Scripts de criação de tabelas (DDL) e inserção de dados (DML).
 
 /queries: Consultas complexas utilizando múltiplos JOINs, WHERE e filtros de regras de negócio.
