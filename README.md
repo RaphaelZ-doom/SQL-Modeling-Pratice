@@ -1,32 +1,35 @@
-🗄️ SQL Server Relational Modeling & Implementation
+📚 SQL Server: Modelagem Relacional & Sistema de Biblioteca
+Este repositório documenta meus estudos em Sistemas de Informação (PUC Minas), focando em Engenharia de Software aplicada a Bancos de Dados Relacionais. Aqui você encontrará tanto a infraestrutura de desenvolvimento quanto a implementação prática de um sistema de biblioteca.
 
-Este repositório documenta o processo de modelagem, implementação e consulta de um banco de dados relacional robusto, utilizando SQL Server em um ambiente containerizado com Docker. O foco principal e aplicar padrões de Engenharia de Software para garantir a integridade dos dados e a escalabilidade das consultas.
+🛠️ Stack Técnica & Ambiente
+Engine: Microsoft SQL Server (T-SQL)
 
-🛠️ Stack Técnica
+Ambiente: Docker (Infraestrutura como código para persistência e isolamento)
 
-Engine: Microsoft SQL Server
+Client: DBeaver 26.0.2 (Interface para gerenciamento e modelagem ER)
 
-Ambiente: Docker (Infraestrutura como código para persistência de dados)
+📖 O Projeto: Gerenciamento de Biblioteca
+O objetivo deste exercício foi modelar e implementar o ecossistema de uma biblioteca acadêmica, tratando regras de negócio complexas como empréstimos, categorias de usuários (Alunos/Professores) e vínculos de autores.
 
-Client: DBeaver 26.0.2 (Interface de gerenciamento e visualização de ER)
+🧠 Destaques de Engenharia & Lógica
+Modelagem Relacional (DER): Implementação de relacionamentos 1:N e N:N (tabelas associativas).
 
-Linguagem: T-SQL (Transact-SQL)
+Normalização & Integridade: Uso rigoroso de PRIMARY KEY e FOREIGN KEY para evitar dados órfãos.
 
-🏗️ Arquitetura do Repositório
+Generalização/Especialização: Estruturação de entidades de usuários para evitar redundância de dados.
 
-/src: Scripts de criação de tabelas (DDL) e inserção de dados (DML).
+Consultas Avançadas: Construção de "Relatórios Master" utilizando múltiplos INNER JOINs e filtros de regras de negócio.
 
-/queries: Consultas complexas utilizando múltiplos JOINs, WHERE e filtros de regras de negócio.
+Padronização: Tratamento de dados sensíveis e formatos de data (ISO 8601).
 
-/docs: Diagrama Entidade-Relacionamento (DER) e documentação do minimundo.
+📂 Estrutura do Repositório
+/src: Scripts de criação de tabelas (DDL) e população inicial (DML).
 
-🧠 Destaques de Engenharia
-Diferente de scripts SQL básicos, este repositório demonstra o domínio de:
+/queries: Consultas complexas e relatórios de lógica de negócio.
 
-Gerenciamento de Identidade: Manipulação de colunas IDENTITY e compreensão do comportamento do contador do banco.
+/docs: Documentação técnica e Diagrama Entidade-Relacionamento (DER).
 
-Integridade Referencial: Implementação de restrições de FOREIGN KEY para evitar dados órfãos e garantir a consistência entre entidades (Usuário -> Aluno/Professor).
+/img: Assets visuais para o README.
 
-Consultas Relacionais: Construção de "Relatórios Master" utilizando encadeamento de INNER JOINs para navegar por tabelas associativas (N:N).
-
-Padronização de Tipos: Tratamento de tipos de dados sensíveis como DATE (ISO 8601) e strings de tamanho fixo/variável.
+📊 Visualização do Banco de Dados
+![Diagrama](img/dia_Biblioteca.png)
